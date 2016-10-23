@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="main-app">
+      <div class="header">
+        <div class="info">
+          <span id="day"></span><br>
+          <span id="month" class="normal-font"></span>
+          <span id="task" class="normal-font">0 tasks pending</span>
+        </div>
+        <div class="input">
+          <input type="text" id="task-input" value="">
+          <button type="button" id="task-add">+</button>
+        </div>
+      </div>
+      <div class="items-list">
+        <ul class="tasks">
+          <li class="not-checked clone"></li>
+          <li class="not-checked">Send email to Jack</li>
+          <li class="not-checked">Morning run</li>
+          <li class="not-checked">Breakfast</li>
+          <li class="not-checked">Gym</li>
+        </ul>
+      </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
