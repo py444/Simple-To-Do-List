@@ -121,19 +121,27 @@ body {
 }
 
 .not-checked:hover:before {
-  background-color: #e7ebf9;
+  background-color: #e7e7ea;
+  border: 2px solid #8f9cee;
 }
 
-.not-checked:after, .checked:after {
-  content: attr(time);
-  color: #bfbfe2;
-  padding-right: 24px;
+.task-time {
+  color: #bfbfe2;;
   font-size: 12px;
+  font-family: Arial;
+  padding-right: 10px;
   float: right;
-  vertical-align: middle;
-  position: relative;
-  top: 1.5px;
-  font-family: Arial
+}
+
+.task-delete {
+  padding-left: 5px;
+  color: #bfbfe2;
+  transition: color .5s ease-in-out;
+  font-size: 14px;
+}
+
+.task-delete:hover {
+  color: #3f51b5;
 }
 
 .checked:before {
