@@ -30,7 +30,7 @@ $('#task-add').on('click', function () {
   var timeSpan = $('<span></span>').prop('class', 'task-time');
   var time = now.getHours() + ":" + now.getMinutes();
   timeSpan.text(time);
-  timeSpan.append($('<span></span>').text("X").prop('class', 'task-delete'));
+  timeSpan.append($('<span></span>').prop('class', 'task-delete icon ion-android-delete'));
   task.append(timeSpan);
 
   task.prop('class', 'not-checked');
