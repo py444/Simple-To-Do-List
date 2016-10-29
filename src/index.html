@@ -16,7 +16,7 @@
         </div>
         <div class="input">
           <input type="text" id="task-input" value="">
-          <button type="button" id="task-add">+</button>
+          <button type="button" id="task-add"><span class="icon ion-plus-round"></span></button>
         </div>
       </div>
       <div class="items-list">
@@ -27,6 +27,13 @@
           <li class="not-checked">Breakfast<span class="task-time"></span></li>
           <li class="not-checked">Gym<span class="task-time"></span></li>
         </ul>
+      </div>
+      <div class="overlay">
+        <div class="popup">
+          <input type="text" id="task-input" value="">
+          <button type="button" id="task-edit"><span class="icon ion-edit"></span></button>
+          <a class="close">&times;</a>
+        </div>
       </div>
     </div>
     <script src="js/jquery.js"></script>
