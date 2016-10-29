@@ -28,11 +28,16 @@ $('#task-add').on('click', function () {
   task.text(capitalizeFirstLetter(taskText));
 
   var timeSpan = $('<span></span>').prop('class', 'task-time');
-  var time = now.getHours() + ":" + now.getMinutes();
+  var minutes = now.getMinutes();
+  if (minutes.length == 1) {
+    minutes = "0" + minutes;
+  }
+  var time = now.getHours() + ":" + minutes;
   if (time.length === 4){
     time = "0" + time;
   }
   timeSpan.text(time);
+  timeSpan.append($('<span></span>').prop('class', 'task-edit icon ion-edit'));
   timeSpan.append($('<span></span>').prop('class', 'task-delete icon ion-android-delete'));
   task.append(timeSpan);
 
@@ -57,7 +62,7 @@ $('li').on('click', function(e) {
     updateTaskPending()
     var appHeigth = parseInt($('.main-app').css("height")) - 40;
     $('.main-app').height(parseInt(appHeigth));
-  }else if (clickedTarget.is($('.task-edit'))) {
+  }else if (clickedTarget.is($('.task-edit')) && $(this).closest("li").attr('class') == "not-checked") {
     $('.overlay').css({
       'visibility': 'visible',
       'opacity': '1'
